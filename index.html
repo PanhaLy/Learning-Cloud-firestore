@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>Private Tutoring</h1>
+
+        <div class="content">
+
+            <form id="add-tutoring-form">
+                <input type="text" name="Name" placeholder="Tutoring name">
+                <input type="text" name="Subject" placeholder="Subject">
+                <button>Add tutoring</button>
+            </form>
+            <ul id="tutoring-list"></ul>
+
+        </div>
+        <script>
+            var firebaseConfig = {
+              apiKey: "AIzaSyC5wXAnzX6JTgWy3K4CBPnpOk1mzOZIyH4",
+              authDomain: "fir-learning-5b2ee.firebaseapp.com",
+              projectId: "fir-learning-5b2ee",
+              storageBucket: "fir-learning-5b2ee.appspot.com",
+              messagingSenderId: "1087403307726",
+              appId: "1:1087403307726:web:c892e62b88939a3615969f",
+              measurementId: "G-TTCY67CJ2D"
+            };
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true });
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
